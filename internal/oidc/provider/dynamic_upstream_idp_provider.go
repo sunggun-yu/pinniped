@@ -105,6 +105,13 @@ type StoredRefreshAttributes struct {
 	AdditionalAttributes map[string]string
 }
 
+type StoredRefreshAttributes struct {
+	Username string
+	Subject  string
+	DN       string
+	AuthTime time.Time
+}
+
 type DynamicUpstreamIDPProvider interface {
 	SetOIDCIdentityProviders(oidcIDPs []UpstreamOIDCIdentityProviderI)
 	GetOIDCIdentityProviders() []UpstreamOIDCIdentityProviderI
